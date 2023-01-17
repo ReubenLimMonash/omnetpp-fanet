@@ -1,0 +1,38 @@
+<config>
+   <interface hosts="fanet_adhoc_hosts_test.gatewayNode" names="wlan0" address="192.168.0.2" netmask="255.255.255.248" metric="31"/>
+   <interface hosts="fanet_adhoc_hosts_test.adhocNode[0]" names="wlan0" address="192.168.0.3" netmask="255.255.255.248" metric="31"/>
+   <interface hosts="fanet_adhoc_hosts_test.adhocNode[1]" names="wlan0" address="192.168.0.4" netmask="255.255.255.248" metric="31"/>
+   <interface hosts="fanet_adhoc_hosts_test.adhocNode[2]" names="wlan0" address="192.168.0.5" netmask="255.255.255.248" metric="31"/>
+   <interface hosts="fanet_adhoc_hosts_test.GCS" names="wlan0" address="192.168.0.1" netmask="255.255.255.248" metric="31"/>
+   <multicast-group hosts="fanet_adhoc_hosts_test.gatewayNode" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="fanet_adhoc_hosts_test.adhocNode[0]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="fanet_adhoc_hosts_test.adhocNode[1]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="fanet_adhoc_hosts_test.adhocNode[2]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="fanet_adhoc_hosts_test.GCS" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <wireless interfaces="fanet_adhoc_hosts_test.gatewayNode%wlan0 fanet_adhoc_hosts_test.adhocNode[0]%wlan0 fanet_adhoc_hosts_test.adhocNode[1]%wlan0 fanet_adhoc_hosts_test.adhocNode[2]%wlan0 fanet_adhoc_hosts_test.GCS%wlan0"/>
+   <route hosts="fanet_adhoc_hosts_test.gatewayNode" destination="192.168.0.1" netmask="255.255.255.255" gateway="192.168.0.1" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.gatewayNode" destination="192.168.0.0" netmask="255.255.255.248" gateway="*" interface="wlan0" metric="31"/>
+   <route hosts="fanet_adhoc_hosts_test.gatewayNode" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[0]" destination="192.168.0.1" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[0]" destination="192.168.0.0" netmask="255.255.255.248" gateway="*" interface="wlan0" metric="31"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[0]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[1]" destination="192.168.0.1" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[1]" destination="192.168.0.0" netmask="255.255.255.248" gateway="*" interface="wlan0" metric="31"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[1]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[2]" destination="192.168.0.1" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[2]" destination="192.168.0.0" netmask="255.255.255.248" gateway="*" interface="wlan0" metric="31"/>
+   <route hosts="fanet_adhoc_hosts_test.adhocNode[2]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.2" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.3" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.4" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.5" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.6" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.7" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.8" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.9" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.10" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.11" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.12" netmask="255.255.255.255" gateway="192.168.0.2" interface="wlan0" metric="0"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="192.168.0.0" netmask="255.255.255.248" gateway="*" interface="wlan0" metric="31"/>
+   <route hosts="fanet_adhoc_hosts_test.GCS" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+</config>
